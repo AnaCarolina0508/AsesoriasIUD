@@ -1,9 +1,13 @@
 version: '3.7'
 services: 
-  micro-asesorias-academicas:
-   container_name: 'asesoriasiud' 
-   image: anacarolinag/asesorias-academicas:v1
+  asesorias-academicas:
+   container_name: 'asesorias-iud1' 
+   image: anacarolinag/asesorias-academicas:v2
    ports:
-    - "3000:3000"
-    networks: 
-     - asesorias-iud
+    - "2001:2000"
+   networks: 
+    - asesoriasiud
+
+networks:
+  asesoriasiud:
+    external: true
